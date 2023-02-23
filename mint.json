@@ -35,6 +35,10 @@
       {
         "group": "Quickstart",
         "pages": ["quickstart"]
+      },
+      {
+        "group": "Tutorial",
+        "pages": ["tutorial"]
       }
     ],
     "footerSocials":
