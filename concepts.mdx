@@ -171,6 +171,7 @@ export type InternalSource = PostgresSource;
 A CustomerDestination is the target system of an Outbound Sync Config, currently just Salesforce.
 
 ### Schema
+
 ```
 type BaseCustomerIntegration = object;
 
@@ -184,9 +185,12 @@ export type CustomerDestination = SalesforceDestination;
 ```
 
 ## CustomerSource
+
 A CustomerSource is the source system of an Inbound Sync Config, currently just Salesforce.
 
 ### Schema
+
+```
 type BaseCustomerIntegration = object;
 
 export type SalesforceSource = BaseCustomerIntegration & {
