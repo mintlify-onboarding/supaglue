@@ -43,6 +43,10 @@
       {
         "group": "Concepts",
         "pages": ["concepts"]
+      },
+      {
+        "group": "Config SDK (Salesforce",
+        "pages": ["config-sdk"]
       }
     ],
     "footerSocials":
