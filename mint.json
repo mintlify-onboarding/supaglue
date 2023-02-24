@@ -51,6 +51,10 @@
       {
         "group": "React Components",
         "pages": ["react-components"]
+      },
+      {
+        "group": "CLI",
+        "pages": ["cli"]
       }
     ],
     "footerSocials":
