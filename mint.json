@@ -55,6 +55,10 @@
       {
         "group": "CLI",
         "pages": ["cli"]
+      },
+      {
+        "group": "Architecture",
+        "pages": ["architecture"]
       }
     ],
     "footerSocials":
