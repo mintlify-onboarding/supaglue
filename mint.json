@@ -75,6 +75,10 @@
       {
         "group": "References",
         "pages": ["references/salesforce-connected-app-setup"]
+      },
+      {
+        "group": "Private Policy",
+        "pages": ["private-policy"]
       }
     ],
     "footerSocials":
