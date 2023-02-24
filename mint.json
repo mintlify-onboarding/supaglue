@@ -4,7 +4,7 @@
       "light": "/logo/logo-light.png",
       "dark": "/logo/logo-dark.png"
     },
-    "favicon": "/favicon.ico",
+    "favicon": "/supaglue-favicon.png",
     "colors": {
       "primary": "#7855FF",
       "light": "#B29EFF",
