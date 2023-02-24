@@ -71,6 +71,10 @@
       {
         "group": "FAQ",
         "pages": ["faq"]
+      },
+      {
+        "group": "References",
+        "pages": ["references/salesforce-connected-app-setup"]
       }
     ],
     "footerSocials":
