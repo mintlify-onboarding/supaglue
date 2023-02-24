@@ -39,6 +39,10 @@
       {
         "group": "Tutorial",
         "pages": ["tutorial"]
+      },
+      {
+        "group": "Concepts",
+        "pages": ["concepts"]
       }
     ],
     "footerSocials":
