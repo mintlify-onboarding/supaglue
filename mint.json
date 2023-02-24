@@ -59,6 +59,18 @@
       {
         "group": "Architecture",
         "pages": ["architecture"]
+      },
+      {
+        "group": "Roadmap & Vision",
+        "pages": ["roadmap-and-vision"]
+      },
+      {
+        "group": "Contributing",
+        "pages": ["contributing"]
+      },
+      {
+        "group": "FAQ",
+        "pages": ["faq"]
       }
     ],
     "footerSocials":
