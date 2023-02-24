@@ -47,6 +47,10 @@
       {
         "group": "Config SDK (Salesforce",
         "pages": ["config-sdk"]
+      },
+      {
+        "group": "React Components",
+        "pages": ["react-components"]
       }
     ],
     "footerSocials":
