@@ -1,5 +1,5 @@
 ---
-title: "Tutorial"
+title: 'Tutorial'
 ---
 
 **In under 15 minutes**, you'll build an integration that allows your customers to sync their Salesforce Account records to a sample Next.js application. We'll use the same sample application from the [Quickstart](/quickstart) for the tutorial.
@@ -18,11 +18,16 @@ Be sure to have completed the [Quickstart](/quickstart).
 
 Be sure to have completed the [Quickstart](/quickstart).
 
-<Info>For this tutorial, we've provided Salesforce Connected App credentials as part of the Sample App setup. Before deploying to production, please provide your own [Salesforce Connected App](/references/salesforce-connected-app-setup) credentials.</Info>
+<Info>
+  For this tutorial, we've provided Salesforce Connected App credentials as part
+  of the Sample App setup. Before deploying to production, please provide your
+  own [Salesforce Connected App](/references/salesforce-connected-app-setup)
+  credentials.
+</Info>
 
 1. Start the sample app locally if it's not already started:
 
-```
+```bash
 cd apps/sample-app
 yarn dev
 ```
@@ -39,14 +44,19 @@ The Developer Config you deployed in the [Quickstart](/quickstart) currently con
 
 To build a Salesforce Sync, we first use the [Config SDK](config-sdk) to create a Sync Config, which defines how to move Salesforce records between your customers' Salesforce and your application:
 
-<Info>For this tutorial, we've included a sample [Developer Config](/concepts) in the `supaglue-config` directory, which lives in the sample app. The Config SDK was also installed as part of the sample app earlier for your convenience.</Info>
+<Info>
+  For this tutorial, we've included a sample [Developer Config](/concepts) in
+  the `supaglue-config` directory, which lives in the sample app. The Config SDK
+  was also installed as part of the sample app earlier for your convenience.
+</Info>
 
 1. Create `account.ts` inside the `apps/sample-app/supaglue-config/inbound` directory. Paste in the following:
 
-```
+```bash
 apps/sample-app/supaglue-config/inbound/account.ts
 ```
-```
+
+```tsx
 import * as sdk from '@supaglue/sdk';
 import credentials from '../postgres_credentials';
 
@@ -71,7 +81,8 @@ const defaultFieldMapping = sdk.defaultFieldMapping([
 const accountSyncConfig = sdk.syncConfigs.inbound({
   name: 'Accounts',
   source: sdk.customer.sources.salesforce({
-    objectConfig: sdk.customer.common.salesforce.specifiedObjectConfig('Account'),
+    objectConfig:
+      sdk.customer.common.salesforce.specifiedObjectConfig('Account'),
   }),
   cronExpression: '*/15 * * * *',
   destination: sdk.internal.destinations.postgres({
@@ -89,6 +100,7 @@ const accountSyncConfig = sdk.syncConfigs.inbound({
 
 export default accountSyncConfig;
 ```
+
 The `inbound` function creates a Sync Config that would allow customers to pull all Account records from their Salesforce instance into the sample app's Postgres database every 15 minutes.
 
 The schema object exposes the specified Salesforce Account fields to your customers and lets them map them to fields in the sample app's Postgres database.
@@ -97,11 +109,11 @@ The defaultFieldMapping object specifies the default field mapping values for th
 
 2. Finally, add the newly created Sync Config for Accounts to the existing Developer Config so it can be deployed with the existing sample Sync Configs:
 
-```
+```bash
 apps/sample-app/supaglue-config/index.ts
 ```
 
-```
+```tsx
 // TUTORIAL: uncomment this
 import accountInboundSyncConfig from './inbound/account';
 
@@ -119,13 +131,13 @@ syncConfigs: [
 
 3. Deploy the sample Developer Config using the CLI:
 
-```
+```bash
 supaglue apply supaglue-config/
 ```
 
 You should see the following output:
 
-```
+```bash
 ...
 ╔══════════════════╤═══════════╤════════╗
 ║ Name             │ Action    │ Status ║
@@ -151,12 +163,13 @@ Finally, let's manually trigger our sync to make sure it works as expected.
 3. Click the "Run sync now" button. This triggers Supaglue to execute a [Sync Run](/concepts) immediately as a background task.
 4. Check the status of the Sync Run by running `syncs list` command to check when it completes:
 
-```
+```bash
 supaglue syncs list --customer-id user1
 ```
+
 You should see that the Accounts sync is enabled from the switch, that it was last run recently and that it's scheduled to run in the future.
 
-```
+```bash
 ℹ Info: Syncs for customer user1
 ╔══════════════════╤═════════╤══════════════════════════╤══════════════════════════╗
 ║ Sync Name        │ Enabled │ Last Run                 │ Next Run                 ║
@@ -185,11 +198,11 @@ You may have realized that two of the columns in the sample app's Contacts table
 
 1. Update the schema object to include the two missing fields:
 
-```
+```bash
 apps/sample-app/supaglue-config/inbound/contact.ts
 ```
 
-```
+```tsx
 const contactSchema = sdk.schema({
   fields: [
     // ...
@@ -219,11 +232,3 @@ Click "Run sync now". Once the background sync completes, verify the newly synce
 ## Next Steps
 
 Congrats! You've successfully shipped your first Salesforce integration using Supaglue, complete with customizations. Learn more about how Supaglue works in the Concepts section.
-
-
-
-
-
-
-
-

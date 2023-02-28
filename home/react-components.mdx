@@ -1,8 +1,11 @@
 ---
-title: "React Components"
+title: 'React Components'
 ---
 
-<Warning>Supaglue is in Public Alpha. There are currently many missing features, interfaces will likely change, and it is not production-ready yet.</Warning>
+<Warning>
+  Supaglue is in Public Alpha. There are currently many missing features,
+  interfaces will likely change, and it is not production-ready yet.
+</Warning>
 
 Install **Supaglue's Next.js SDK** to use functional React components and hooks that are [fully customizable](/react-components). They are embeddable within your application so your customers can configure how Salesforce Syncs should work.
 
@@ -10,7 +13,7 @@ Install **Supaglue's Next.js SDK** to use functional React components and hooks 
 
 Navigate to your application's root directory and install the `@supaglue/nextjs` package:
 
-```
+```bash
 yarn add @supaglue/nextjs
 ```
 
@@ -18,17 +21,19 @@ yarn add @supaglue/nextjs
 
 Set the following environment variables in your `.env` file.
 
-```
+```bash
 NEXT_PUBLIC_SUPAGLUE_HOST=http://localhost:8080
 ```
 
-<Warning>Supaglue's Nextjs SDK client-server authentication is not yet implemented.</Warning>
+<Warning>
+  Supaglue's Nextjs SDK client-server authentication is not yet implemented.
+</Warning>
 
 ## Configure `<SupaglueProvider/>`
 
 Supaglue requires your Next.js application to be wrapped in the `<SupaglueProvider/>` component. It provide active session, per-customer context, and sync context to Supaglue's hooks and components.
 
-```
+```tsx
 // _app.tsx
 
 import { SupaglueProvider } from '@supaglue/nextjs';
@@ -53,7 +58,8 @@ A button that links to the Salesforce sign-in page or displays the sign-in page 
 ![](/image/react-components.png)
 
 Example:
-```
+
+```tsx
 <SalesforceConnectButton mode="redirect" />
 ```
 
@@ -67,7 +73,7 @@ A card containing a list of your application fields that can be mapped to your c
 
 Example:
 
-```
+```tsx
 <FieldMapping syncConfigName="contact_sync" />
 ```
 
@@ -79,7 +85,7 @@ A button that allows your customers to manually trigger a sync from Salesforce t
 
 ![](/image/react-components-3.png)
 
-```
+```tsx
 <TriggerSyncButton
   syncConfigName="contact_sync"
   onSuccess={() => alert('Successfully started sync!')}
@@ -97,7 +103,7 @@ A switch used to turn on/off syncs from Salesforce to your application.
 
 Example:
 
-```
+```tsx
 <SyncSwitch includeSyncDescription syncConfigName="Contacts" />
 ```
 
@@ -111,8 +117,12 @@ A card container housing the `<SalesforceConnectButton/>` along with a header, d
 
 Example:
 
-```
-<IntegrationCard name="Salesforce" description="Sync your objects" configurationUrl={`/salesforce/details`} />
+```tsx
+<IntegrationCard
+  name="Salesforce"
+  description="Sync your objects"
+  configurationUrl={`/salesforce/details`}
+/>
 ```
 
 Props: [link](https://github.com/supaglue-labs/supaglue/blob/v0.2.0/packages/nextjs/src/components/SalesforceConnectButton/SalesforceConnectButton.tsx#L7)
@@ -129,17 +139,18 @@ Used for fine-grained theme overrides when you want to style specific HTML eleme
 
 Use your browser inspector to view Supaglue namespaced CSS classes
 
-```
+```tsx
 <select class="sg-fieldDropdown ..."></select>
 ```
 
 Use your preferred styling method to replace these classes with your own:
+
 - Stylesheets / CSS Modules
 - Tailwind CSS
 
 Stylesheets / CSS Modules Example:
 
-```
+```tsx
 /* FieldMapping.module.css */
 
 .primaryColor {
@@ -153,7 +164,7 @@ Stylesheets / CSS Modules Example:
 }
 ```
 
-```
+```tsx
 <FieldMapping
   syncConfigName={syncConfigName}
   appearance={{
@@ -167,7 +178,7 @@ Stylesheets / CSS Modules Example:
 
 Tailwind CSS Example:
 
-```
+```tsx
 <FieldMapping
   syncConfigName={syncConfigName}
   appearance={{
@@ -178,4 +189,3 @@ Tailwind CSS Example:
   }}
 />
 ```
-
