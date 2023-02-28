@@ -47,13 +47,8 @@
           "home/roadmap-and-vision",
           "home/contributing",
           "home/faq",
+          "home/references/salesforce-connected-app-setup",
           "home/private-policy"
-        ]
-      },
-      {
-        "group": "References",
-        "pages": [
-          "references/salesforce-connected-app-setup"
         ]
       }
     ],
