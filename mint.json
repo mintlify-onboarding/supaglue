@@ -30,55 +30,21 @@
     "navigation": [
       {
         "group": "Introduction",
-        "pages": ["intro"]
-      },
-      {
-        "group": "Quickstart",
-        "pages": ["quickstart"]
-      },
-      {
-        "group": "Tutorial",
-        "pages": ["tutorial"]
-      },
-      {
-        "group": "Concepts",
-        "pages": ["concepts"]
-      },
-      {
-        "group": "Config SDK (Salesforce",
-        "pages": ["config-sdk"]
-      },
-      {
-        "group": "React Components",
-        "pages": ["react-components"]
-      },
-      {
-        "group": "CLI",
-        "pages": ["cli"]
-      },
-      {
-        "group": "Architecture",
-        "pages": ["architecture"]
-      },
-      {
-        "group": "Roadmap & Vision",
-        "pages": ["roadmap-and-vision"]
-      },
-      {
-        "group": "Contributing",
-        "pages": ["contributing"]
-      },
-      {
-        "group": "FAQ",
-        "pages": ["faq"]
-      },
-      {
-        "group": "References",
-        "pages": ["references/salesforce-connected-app-setup"]
-      },
-      {
-        "group": "Private Policy",
-        "pages": ["private-policy"]
+        "pages": [
+          "home/intro", 
+          "home/quickstart",
+          "home/tutorial",
+          "home/concepts", 
+          "home/config-sdk",
+          "home/react-components",
+          "home/cli",
+          "home/architecture",
+          "home/roadmap-and-vision",
+          "home/contributing",
+          "home/faq",
+          "home/references/salesforce-connected-app-setup",
+          "home/private-policy"
+        ]
       }
     ],
     "footerSocials":
