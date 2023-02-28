@@ -11,8 +11,8 @@
       "dark": "#4A29CB"
     },
     "topbarCtaButton": {
-      "name": "Blog",
-      "url": "https://www.supaglue.com/blog"
+      "name": "github",
+      "url": "https://github.com/supaglue-labs/supaglue"
     },
     "topbarLinks": [
       {
@@ -25,11 +25,16 @@
         "name": "Slack",
         "icon": "slack",
         "url": "https://join.slack.com/t/supagluecommunity/shared_invite/zt-1o2hiozzl-ZRQswNzlT5W4sXwrQnVlDg"
+      },
+      {
+        "name": "Blog",
+        "icon": "book",
+        "url": "https://www.supaglue.com/blog"
       }
     ],
     "navigation": [
       {
-        "group": "Introduction",
+        "group": "Home",
         "pages": [
           "home/intro", 
           "home/quickstart",
@@ -42,8 +47,13 @@
           "home/roadmap-and-vision",
           "home/contributing",
           "home/faq",
-          "home/references/salesforce-connected-app-setup",
           "home/private-policy"
+        ]
+      },
+      {
+        "group": "References",
+        "pages": [
+          "references/salesforce-connected-app-setup"
         ]
       }
     ],

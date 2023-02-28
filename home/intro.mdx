@@ -16,16 +16,33 @@ Supaglue is also not a unified API for interacting with many CRMs. Whereas unifi
 
 ## Features
 
-- **Integration as code**: Use Typescript as declarative configuration to define syncs.
-- **Managed syncs**: Let Supaglue execute syncs for you with fault-tolerance, retries, rate limiting, and error handling.
-- **Managed OAuth**: Offload OAuth flows, storing & refreshing tokens to Supaglue
-- **Embeddable UI components**: Customer-facing React components that let your customers configure syncs. Fully-functional and customizable.
-- **Prebuilt sync templates**: Use ready-made sync templates or customize them to your use case.
-- **Open source**: Self-host Supaglue or extend it. Sensitive customer data never leaves your cloud.
+<CardGroup cols={2}>
+  <Card title="Integration as code" icon="code" color="#7855FF">
+    Use Typescript as declarative configuration to define syncs.
+  </Card>
+  <Card title="Managed syncs" icon="rotate" color="#7855FF">
+    Let Supaglue execute syncs for you with fault-tolerance, retries, rate limiting, and error handling.
+  </Card>
+  <Card title="Managed OAuth" icon="list-check" color="#7855FF">
+    Offload OAuth flows, storing & refreshing tokens to Supaglue
+  </Card>
+  <Card title="Embeddable UI components" icon="anchor" color="#7855FF">
+    Customer-facing React components that let your customers configure syncs. Fully-functional and customizable.
+  </Card>
+  <Card title="Prebuilt sync templates" icon="palette" color="#7855FF">
+     Use ready-made sync templates or customize them to your use case.
+  </Card>
+  <Card title="Open source" icon="shield-halved" color="#7855FF">
+    Self-host Supaglue or extend it. Sensitive customer data never leaves your cloud.
+  </Card>
+</CardGroup>
 
 Supaglue is a set of open-source components to let developers build integrations in their applications with their customers' Salesforce using code, quickly and extensibly.
 
+<Frame>
 ![](/image/intro.png)
+</Frame>
+
 
 - **Config SDK** to define [syncs](/concepts) declaratively
 - **CLI** to publish sync configuration changes
@@ -46,13 +63,20 @@ Supaglue can be used by B2B SaaS companies to provide customer-facing Salesforce
 
 Read more about where Supaglue is headed [here](/roadmap-and-vision).
 
-- [x] Private Alpha: Testing Supaglue with a closed set of developers
-
-- [x] Public Alpha: Anyone can run Supaglue locally using Docker. Go easy on us! We're working on substantial improvements.
-
-- [ ] Public Beta: Stable and feature-rich enough to implement in production
-
-- [ ] Public: Production-ready for majority of integration use cases with Salesforce
+<CardGroup cols={2}>
+  <Card title="Private Alpha" icon="square-check" color="#7855FF">
+    Testing Supaglue with a closed set of developers
+  </Card>
+  <Card title="Public Alpha" icon="square-check" color="#7855FF">
+    Anyone can run Supaglue locally using Docker. Go easy on us! We're working on substantial improvements.
+  </Card>
+  <Card title="Public Beta" icon="square" color="#7855FF">
+    Stable and feature-rich enough to implement in production
+  </Card>
+  <Card title="Public" icon="square" color="#7855FF">
+    Production-ready for majority of integration use cases with Salesforce
+  </Card>
+</CardGroup>
 
 We are currently in Public Alpha. Watch releases of [this repo](https://github.com/supaglue-labs/supaglue) to be notified of significant updates (as minor semver releases).
 

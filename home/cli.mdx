@@ -5,7 +5,7 @@ title: "CLI"
 The `supaglue` command allows developers to operate on [Developer Config](/concepts) and push them to Supaglue Integration Service, as well as query the status of syncs and sync runs, and more.
 
 ## Install
-```
+```bash
 npm install -g @supaglue/cli
 ```
 
@@ -13,7 +13,7 @@ Ensure you are using a paired version of the CLI with the rest of the Supaglue s
 
 ## Running the CLI
 
-```
+```bash
 supaglue --help
 ```
 
@@ -23,7 +23,7 @@ supaglue --help
 
 `supaglue apply` is the main command used by developers to push Developer Config from their local development environments to the Supaglue Integration Service. Applying Developer Config will create, update, and remove [Syncs](/concepts) running in the Supaglue Integration Service.
 
-```
+```bash
 supaglue apply apps/sample-app/supaglue-config
 ```
 
@@ -33,7 +33,7 @@ supaglue apply apps/sample-app/supaglue-config
 
 Example:
 
-```
+```bash
 supaglue syncs list --customer-id user1
 ```
 
@@ -42,7 +42,7 @@ supaglue syncs list --customer-id user1
 
 Example:
 
-```
+```bash
 supaglue syncs logs --customer-id user1 --status error
 ```
 
@@ -52,7 +52,7 @@ supaglue syncs logs --customer-id user1 --status error
 
 Example:
 
-```
+```bash
 supaglue syncs resume --customer-id user1 --sync-config-name Opportunities
 ```
 
@@ -62,7 +62,7 @@ supaglue syncs resume --customer-id user1 --sync-config-name Opportunities
 
 Example:
 
-```
+```bash
 supaglue sync-configs list
 ```
 

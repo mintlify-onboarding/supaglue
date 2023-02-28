@@ -1,10 +1,12 @@
 ---
-title: "Quickstart"
+title: "Concepts"
+description: "This section goes over the lifecycle of the developer and customer flow using Supaglue."
 ---
 
-This section goes over the lifecycle of the developer and customer flow using Supaglue.
-
+<Frame>
 ![](/image/concepts.png)
+</Frame>
+
 
 1. A [Developer Config](/concepts) is authored by developers to define a set of [Sync Configs](/concepts) each of which define the behavior of a [Sync](/concepts)
 2. Once a Developer Config is deployed to the [Supaglue Integration Service](/architecture), the Sync(s) become available for customers to use
@@ -21,7 +23,7 @@ A Developer Config is authored by the developer and deployed to the Supaglue Int
 
 ### Schema
 
-```
+```typescript
 type DeveloperConfigParams = {
   syncConfigs: SyncConfig[];
   salesforceCredentials: SalesforceCredentials;
@@ -90,7 +92,7 @@ Sync Values are customer-provided values related to Syncs that are used at runti
 
 A Sync Run is one instance of Sync execution.
 
-```
+```typescript
 type SyncRun = {
   id: string;
   syncId: string;
@@ -103,7 +105,7 @@ type SyncRun = {
 An InternalDestination is the target system of an Inbound Sync Config, either Postgres or a webhook.
 
 ### Schema
-```
+```typescript
 type BaseInternalIntegration = {
   schema: Schema;
   retryPolicy?: RetryPolicy;
@@ -141,7 +143,7 @@ export type InternalDestination = PostgresDestination | WebhookDestination;
 An InternalSource is the source system of an Outbound Sync Config, currently just Postgres.
 
 ### Schema
-```
+```typescript
 type BaseInternalIntegration = {
   schema: Schema;
   retryPolicy?: RetryPolicy;
@@ -171,7 +173,7 @@ A CustomerDestination is the target system of an Outbound Sync Config, currently
 
 ### Schema
 
-```
+```typescript
 type BaseCustomerIntegration = object;
 
 export type SalesforceDestination = BaseCustomerIntegration & {
@@ -189,7 +191,7 @@ A CustomerSource is the source system of an Inbound Sync Config, currently just 
 
 ### Schema
 
-```
+```typescript
 type BaseCustomerIntegration = object;
 
 export type SalesforceSource = BaseCustomerIntegration & {
