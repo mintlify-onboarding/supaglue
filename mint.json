@@ -39,15 +39,18 @@
           "home/intro", 
           "home/quickstart",
           "home/concepts", 
-          "home/config-sdk",
-          "home/react-components",
-          "home/cli",
           "home/architecture",
+          {
+            "group": "Connectors",
+            "pages": [
+              "connectors/hubspot",
+              "connectors/salesforce",
+              "connectors/more-connectors"
+            ]
+          },
           "home/roadmap-and-vision",
           "home/contributing",
-          "home/faq",
-          "home/references/salesforce-connected-app-setup",
-          "home/private-policy"
+          "home/faq"
         ]
       }
     ],
