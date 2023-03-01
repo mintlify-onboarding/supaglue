@@ -73,6 +73,15 @@
               "reference/get-account",
               "reference/update-account"
             ]
+          },
+          {
+            "group": "Contacts",
+            "pages": [
+              "reference/list-contacts",
+              "reference/create-contact",
+              "reference/get-contact",
+              "reference/update-contact"
+            ]
           }
         ]
       }
