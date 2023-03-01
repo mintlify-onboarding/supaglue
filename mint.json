@@ -82,6 +82,15 @@
               "reference/get-contact",
               "reference/update-contact"
             ]
+          },
+          {
+            "group": "Leads",
+            "pages": [
+              "reference/list-leads",
+              "reference/create-lead",
+              "reference/get-lead",
+              "reference/update-lead"
+            ]
           }
         ]
       }
