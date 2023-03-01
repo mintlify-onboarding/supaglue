@@ -91,6 +91,15 @@
               "reference/get-lead",
               "reference/update-lead"
             ]
+          },
+          {
+            "group": "Opportunities",
+            "pages": [
+              "reference/list-opportunities",
+              "reference/create-opportunity",
+              "reference/get-opportunity",
+              "reference/update-opportunity"
+            ]
           }
         ]
       }
