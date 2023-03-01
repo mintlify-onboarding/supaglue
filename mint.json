@@ -65,7 +65,13 @@
         "group": "API Reference",
         "pages": [
           "reference/intro",
-          "reference/accounts"
+          {
+            "group": "Accounts",
+            "pages": [
+              "reference/list-accounts",
+              "reference/post-account"
+            ]
+          }
         ]
       }
     ],
