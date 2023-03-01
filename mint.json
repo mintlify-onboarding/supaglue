@@ -22,6 +22,11 @@
     ],
     "anchors": [
       {
+        "name": "API Reference",
+        "icon": "square-terminal",
+        "url": "reference"
+      },
+      {
         "name": "Slack",
         "icon": "slack",
         "url": "https://join.slack.com/t/supagluecommunity/shared_invite/zt-1o2hiozzl-ZRQswNzlT5W4sXwrQnVlDg"
@@ -51,6 +56,12 @@
           "home/roadmap-and-vision",
           "home/contributing",
           "home/faq"
+        ]
+      },
+      {
+        "group": "API Reference",
+        "pages": [
+          "reference/intro"
         ]
       }
     ],
