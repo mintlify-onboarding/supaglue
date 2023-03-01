@@ -38,7 +38,6 @@
         "pages": [
           "home/intro", 
           "home/quickstart",
-          "home/tutorial",
           "home/concepts", 
           "home/config-sdk",
           "home/react-components",
