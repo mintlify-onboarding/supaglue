@@ -69,7 +69,9 @@
             "group": "Accounts",
             "pages": [
               "reference/list-accounts",
-              "reference/post-account"
+              "reference/create-accounts",
+              "reference/get-account",
+              "reference/update-account"
             ]
           }
         ]
