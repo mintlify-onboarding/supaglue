@@ -4,6 +4,9 @@
       "light": "/logo/logo-light.png",
       "dark": "/logo/logo-dark.png"
     },
+    "api": {
+      "baseUrl": "https://localhost:8080/crm/v1/"
+    },
     "favicon": "/favicon.png",
     "colors": {
       "primary": "#7855FF",
@@ -61,7 +64,8 @@
       {
         "group": "API Reference",
         "pages": [
-          "reference/intro"
+          "reference/intro",
+          "reference/accounts"
         ]
       }
     ],
