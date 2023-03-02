@@ -1,10 +1,11 @@
 ---
 title: 'Quickstart'
+description: "In less than 5 minutes, you will use Supaglue to deploy a basic Salesforce integration that allows your customers to sync their Salesforce objects to a sample Next.js application."
 ---
 
-**In less than 5 minutes**, you will use Supaglue to deploy a basic Salesforce integration that allows your customers to sync their Salesforce objects to a sample Next.js application.
-
+<Frame>
 ![](/image/quickstart.gif)
+</Frame>
 
 ## 1. Run Supaglue locally
 
@@ -20,9 +21,13 @@ docker compose up
 
 Click the links below to simulate a customer connecting their HubSpot or Salesforce account to your app.
 
-- **Salesforce**: http://localhost:8080/oauth/connect?customerId=9ca0cd70-ae74-4f8f-81fd-9dd5d0a41677&providerName=salesforce
 
-- **HubSpot**: http://localhost:8080/oauth/connect?customerId=ea3039fa-27de-4535-90d8-db2bab0c0252&providerName=hubspot
+<CardGroup cols={2}>
+<Card title="Salesforce" icon="salesforce" href="http://localhost:8080/oauth/connect?customerId=9ca0cd70-ae74-4f8f-81fd-9dd5d0a41677&providerName=salesforce">
+</Card>
+<Card title="HubSpot" icon="hubspot" href="http://localhost:8080/oauth/connect?customerId=ea3039fa-27de-4535-90d8-db2bab0c0252&providerName=hubspot">
+</Card>
+</CardGroup>
 
 This will install the Supaglue Example App in the HubSpot or Salesforce account you've connected, so that your local Supaglue instance can start syncing data. Upon successful login, you will be redirected back to this page.
 
@@ -50,16 +55,15 @@ Make a `GET` request to get a list of accounts:
 <Tabs>
   <Tab title="Salesforce">
 
-  ```curl 
-  curl localhost:8080/crm/v1/accounts \
+```bash
+curl localhost:8080/crm/v1/accounts \
   -H 'customer-id: 9ca0cd70-ae74-4f8f-81fd-9dd5d0a41677' \
   -H 'provider-name: salesforce'
   ```
 
-  Example result:
-
-  ```
-  {
+Example result: 
+```json
+{
   "results": [
     {
       "id": "4019000e-8743-4603-9a0e-69633289666d",
@@ -74,18 +78,18 @@ Make a `GET` request to get a list of accounts:
     ...
   ]
 }
-    ```
+```
   </Tab>
   <Tab title="Hubspot">
 
-```curl
-  curl localhost:8080/crm/v1/accounts \
+```bash
+curl localhost:8080/crm/v1/accounts \
   -H 'customer-id: ea3039fa-27de-4535-90d8-db2bab0c0252' \
   -H 'provider-name: hubspot'
   ```
 
 Example result: 
-```
+```json
 {
   "results": [
     {
@@ -112,15 +116,15 @@ If the curl in step 3 did not work, you can curl the `/crm/v1/sync-info` endpoin
 <Tabs>
   <Tab title="Salesforce">
 
-  ```curl 
-  curl localhost:8080/crm/v1/sync-info \
+```bash
+curl localhost:8080/crm/v1/sync-info \
   -H 'customer-id: 9ca0cd70-ae74-4f8f-81fd-9dd5d0a41677' \
   -H 'provider-name: salesforce'
   ```
 
   Example result:
 
-  ```
+  ```json
   [
   {
     "model_name": "account",
@@ -134,15 +138,16 @@ If the curl in step 3 did not work, you can curl the `/crm/v1/sync-info` endpoin
   </Tab>
   <Tab title="Hubspot">
 
-```curl
-  curl localhost:8080/crm/v1/sync-info \
+```bash
+curl localhost:8080/crm/v1/sync-info \
   -H 'customer-id: ea3039fa-27de-4535-90d8-db2bab0c0252' \
   -H 'provider-name: hubspot'
   ```
 
-Example result: 
-```
-[
+  Example result:
+
+  ```json
+  [
   {
     "model_name": "account",
     "last_sync_start": "2023-02-24T07:52:00.076Z",
@@ -151,7 +156,7 @@ Example result:
   },
   ...
 ]
-```
+    ```
   </Tab>
 </Tabs>
 
